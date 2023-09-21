@@ -42,4 +42,36 @@ First phase: Creating a function to exact search a word from the main definition
 4. Display it
 Easy! I got this. This should be finishable in 2 weeks.
 
+## Day 2
 
+... Not easy.
+Issues I've encountered:
+- This is a version of JMDict (originally in very crappy EPWING format) that is converted to JSON and has no documentation.
+- There are multiple (34) JSON files.
+- I spent half a day trying to download Json.NET, which I don't know how to use.
+- There are multiple entries for the same word for different definitions and **WHY ARE THERE DUPLICATES OF DEFINITIONS**
+
+Ok so let's try to handle the first issue. Gotta understand the dictionary first.
+It's an array [] of definitions, and each entry looks like this: (1st definition in term_bank_32.json)
+```json
+["取扱店","とりあつかいてん","n","",2,["service point","agency","office"],2837181,""]
+```
+Let's linesplit that for readability, and compare it to yomi-chan results and a *very* similar word to understand what's going on.
+
+Word 1:
+```json
+[ "取扱店",  // Big text to be displayed, usually kanji
+  "とりあつかいてん",  // Hiragana if the word isn't already in hiragana/katakana
+  "n",  // Tags for the word separated by spaces; "n" means "common noun"
+  "",  // ???
+  2,  // Definition ID: Words that have multiple definition entries will have one of these
+  ["service point","agency","office"],  // Definition
+  2837181,  // Word ID: Words that are the same just written in different ways will have the same Word ID
+  ""  // ???
+]
+```
+
+Other definition entry of this word: (they are the same!)
+```json
+["取り扱い店","とりあつかいてん","n","",3,["store dealing in a particular item","distributor"],2837181,""]
+```
