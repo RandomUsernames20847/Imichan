@@ -21,12 +21,12 @@ Ok so now.. uh..
 - Customisable keybinds
 + Customisable popup appearance
 + Send words or kanji and their definitions to Anki as a new flash card
-# Include all kanji info Rikaikun carries:
+### Include all kanji info Rikaikun carries:
 - Unicode
 - PinYin
 - Every. Single. Kanji Reading.
 - Skip Pattern (Identification)
-# Include all word information Yomichan carries:
+### Include all word information Yomichan carries:
 > - JMDict Dictionary
 > + JMneDict Name Dictionary
 > + KireiCake Slang Dictionary
@@ -38,4 +38,8 @@ Let's journal out progress and make a plan!
 First phase: Creating a function to exact search a word from the main definitions dictionary (JMDict) and get its definitions
 1. Download JMDict
 2. Read the json and search for the word
-3. Get the diction
+3. Get the definition
+4. Display it
+Easy! I got this. This should be finishable in 2 weeks.
+
+
