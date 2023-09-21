@@ -11,23 +11,31 @@ Right. An analysis for my teacher to read. It'll be pretty boring.
 >
 > How is it unique?
 To my knowledge, there is NO other app that has capabilities like this because it is such a small niche. My experience in using other desktop programs like KanjiTomo and JGlossator have been difficult, clunky, limited (showing Kanji information only, not the definition of the whole word) and resource-intensive. I believe I can optimise an app enough to extract text cleanly but still provide a feature-rich program.
->
-> What can it do?
-> - Extract text from the app the cursor sees at that location
-> - Display deinitions, pronunciation, modifications applied to the selected word when required according to multiple dictionary search results
-> - Display kanji information when required (stroke order, kun/on reading)
-> - Extract text from any image the cursor sees, even if it is rotated
-> - Customisable keybinds
-> + Customisable popup appearance
-> + Send words or kanji and their definitions to Anki as a new flash card
-> - Include all kanji info Rikaikun carries:
-> - Unicode
-> - PinYin
-> - Every. Single. Kanji Reading.
-> - Skip Pattern (Identification)
-> Include all word information Yomichan carries:
+
+Ok so now.. uh.. 
+## What should it be able to do?
+- Extract text from the app the cursor sees at that location
+- Display deinitions, pronunciation, modifications applied to the selected word when required according to multiple dictionary search results
+- Display kanji information when required (stroke order, kun/on reading)
+- Extract text from any image the cursor sees, even if it is rotated
+- Customisable keybinds
++ Customisable popup appearance
++ Send words or kanji and their definitions to Anki as a new flash card
+# Include all kanji info Rikaikun carries:
+- Unicode
+- PinYin
+- Every. Single. Kanji Reading.
+- Skip Pattern (Identification)
+# Include all word information Yomichan carries:
 > - JMDict Dictionary
 > + JMneDict Name Dictionary
 > + KireiCake Slang Dictionary
 > - KanjiDic Kanji Dictionary
-> + KanjiUM Pitch Accents 
+> + KanjiUM Pitch Accents
+
+Okok that's a lot of requirements... Uhh
+Let's journal out progress and make a plan!
+First phase: Creating a function to exact search a word from the main definitions dictionary (JMDict) and get its definitions
+1. Download JMDict
+2. Read the json and search for the word
+3. Get the diction
